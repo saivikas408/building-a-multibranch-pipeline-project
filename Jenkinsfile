@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm install -g node@latest --unsafe-perm'
+                sh 'sudo npm install -g --unsafe-perm=true --allow-root'
             }
         }
         stage('Test') {
